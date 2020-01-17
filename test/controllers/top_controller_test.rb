@@ -6,4 +6,9 @@ class TopControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get show" do
+    get top_show_url
+    assert_response :success
+  end
+
 end
