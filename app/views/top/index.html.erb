@@ -23,6 +23,11 @@
       <li class="nav-item"><a class="nav-link" href="#">お問い合わせ</a></li>
     </ul>
   </div>
+
+  <%= form_with(scope: :search, url: items_path, method: :get, local: true) do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit('検索') %>
+  <% end %>
 </nav>
 
 <h1><!DOCTYPE html>
