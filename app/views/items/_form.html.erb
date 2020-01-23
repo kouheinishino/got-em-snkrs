@@ -1,0 +1,37 @@
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :商品名 %>
+    <%= form.text_field :商品名 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :発売日 %>
+    <%= form.date_select :発売日 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :タイプ %>
+    <%= form.number_field :タイプ %>
+  </div>
+
+  <div class="field">
+    <%= form.label :コラボ %>
+    <%= form.check_box :コラボ %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

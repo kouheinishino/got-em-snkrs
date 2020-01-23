@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  商品名: MyString
+  発売日: 2020-01-23
+  タイプ: 1
+  コラボ: false
+
+two:
+  商品名: MyString
+  発売日: 2020-01-23
+  タイプ: 1
+  コラボ: false

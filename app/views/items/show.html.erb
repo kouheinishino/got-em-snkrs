@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>商品名:</strong>
+  <%= @item.商品名 %>
+</p>
+
+<p>
+  <strong>発売日:</strong>
+  <%= @item.発売日 %>
+</p>
+
+<p>
+  <strong>タイプ:</strong>
+  <%= @item.タイプ %>
+</p>
+
+<p>
+  <strong>コラボ:</strong>
+  <%= @item.コラボ %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
