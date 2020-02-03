@@ -4,7 +4,8 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.search(params[:search])
+    #@items = Item.all
   end
 
   # GET /items/1
@@ -69,6 +70,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:商品名, :発売日, :タイプ, :コラボ)
+      params.require(:item).permit(:name, :price, :release_date, :category, :collaboration, :description, :image_path)
     end
 end

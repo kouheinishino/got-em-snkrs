@@ -2,13 +2,21 @@
 
 <h1>Items</h1>
 
+<%= form_with url: items_path, method: :get, local: true do |f| %>
+  <%= f.text_field :search %>
+  <%= f.submit :search %>
+<% end %>
+
 <table>
   <thead>
     <tr>
-      <th>商品名</th>
-      <th>発売日</th>
-      <th>タイプ</th>
-      <th>コラボ</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Release date</th>
+      <th>Category</th>
+      <th>Collaboration</th>
+      <th>Description</th>
+      <th>Image path</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +24,13 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><%= item.商品名 %></td>
-        <td><%= item.発売日 %></td>
-        <td><%= item.タイプ %></td>
-        <td><%= item.コラボ %></td>
+        <td><%= item.name %></td>
+        <td><%= item.price %></td>
+        <td><%= item.release_date %></td>
+        <td><%= item.category_id %></td>
+        <td><%= item.collaboration %></td>
+        <td><%= item.description %></td>
+        <td><%= item.image_path %></td>
         <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

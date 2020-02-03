@@ -12,23 +12,38 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :商品名 %>
-    <%= form.text_field :商品名 %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :発売日 %>
-    <%= form.date_select :発売日 %>
+    <%= form.label :price %>
+    <%= form.text_field :price %>
   </div>
 
   <div class="field">
-    <%= form.label :タイプ %>
-    <%= form.number_field :タイプ %>
+    <%= form.label :release_date %>
+    <%= form.text_field :release_date %>
   </div>
 
   <div class="field">
-    <%= form.label :コラボ %>
-    <%= form.check_box :コラボ %>
+    <%= form.label :category %>
+    <%= form.number_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :collaboration %>
+    <%= form.text_field :collaboration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_path %>
+    <%= form.text_field :image_path %>
   </div>
 
   <div class="actions">

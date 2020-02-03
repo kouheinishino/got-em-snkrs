@@ -10,22 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_23_063558) do
+ActiveRecord::Schema.define(version: 2020_02_02_145350) do
 
-  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "商品名"
-    t.date "発売日"
-    t.integer "タイプ"
-    t.boolean "コラボ"
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "商品名"
-    t.date "発売日"
-    t.integer "タイプ"
-    t.boolean "コラボ"
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.string "price"
+    t.string "release_date"
+    t.integer "category_id"
+    t.string "collaboration"
+    t.text "description"
+    t.string "image_path"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

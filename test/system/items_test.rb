@@ -14,10 +14,13 @@ class ItemsTest < ApplicationSystemTestCase
     visit items_url
     click_on "New Item"
 
-    check "コラボ" if @item.コラボ
-    fill_in "タイプ", with: @item.タイプ
-    fill_in "商品名", with: @item.商品名
-    fill_in "発売日", with: @item.発売日
+    fill_in "Category", with: @item.category
+    fill_in "Collaboration", with: @item.collaboration
+    fill_in "Description", with: @item.description
+    fill_in "Image path", with: @item.image_path
+    fill_in "Name", with: @item.name
+    fill_in "Price", with: @item.price
+    fill_in "Release date", with: @item.release_date
     click_on "Create Item"
 
     assert_text "Item was successfully created"
@@ -28,10 +31,13 @@ class ItemsTest < ApplicationSystemTestCase
     visit items_url
     click_on "Edit", match: :first
 
-    check "コラボ" if @item.コラボ
-    fill_in "タイプ", with: @item.タイプ
-    fill_in "商品名", with: @item.商品名
-    fill_in "発売日", with: @item.発売日
+    fill_in "Category", with: @item.category
+    fill_in "Collaboration", with: @item.collaboration
+    fill_in "Description", with: @item.description
+    fill_in "Image path", with: @item.image_path
+    fill_in "Name", with: @item.name
+    fill_in "Price", with: @item.price
+    fill_in "Release date", with: @item.release_date
     click_on "Update Item"
 
     assert_text "Item was successfully updated"

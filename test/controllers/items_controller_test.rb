@@ -17,7 +17,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create item" do
     assert_difference('Item.count') do
-      post items_url, params: { item: { コラボ: @item.コラボ, タイプ: @item.タイプ, 商品名: @item.商品名, 発売日: @item.発売日 } }
+      post items_url, params: { item: { category: @item.category, collaboration: @item.collaboration, description: @item.description, image_path: @item.image_path, name: @item.name, price: @item.price, release_date: @item.release_date } }
     end
 
     assert_redirected_to item_url(Item.last)
@@ -34,7 +34,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update item" do
-    patch item_url(@item), params: { item: { コラボ: @item.コラボ, タイプ: @item.タイプ, 商品名: @item.商品名, 発売日: @item.発売日 } }
+    patch item_url(@item), params: { item: { category: @item.category, collaboration: @item.collaboration, description: @item.description, image_path: @item.image_path, name: @item.name, price: @item.price, release_date: @item.release_date } }
     assert_redirected_to item_url(@item)
   end
 
