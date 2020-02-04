@@ -1,6 +1,9 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
+  # Basic認証フィルタを対象アクションに指定
+  http_basic_authenticate_with :name => 'a', :password => 'a', :only => :new
+
   # GET /items
   # GET /items.json
   def index

@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
+  # Basic認証フィルタを対象アクションに指定
+  http_basic_authenticate_with :name => 'a', :password => 'a'
+
   # GET /categories
   # GET /categories.json
   def index
