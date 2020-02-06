@@ -22,12 +22,16 @@
   </thead>
 
   <tbody>
+    <div>
+      <%= link_to image_tag("2020january.jpeg"),"#"%>
+    </div>
+
     <% @items.each do |item| %>
       <tr>
         <td><%= item.name %></td>
         <td><%= item.price %></td>
         <td><%= item.release_date %></td>
-        <td><%= item.category_id %></td>
+        <td><%= item.category.name %></td>
         <td><%= item.collaboration %></td>
         <td><%= item.description %></td>
         <td><%= item.image_path %></td>

@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
-    has_one :category
+    belongs_to :category
+
 
     def self.search(search)
         if search.present?
