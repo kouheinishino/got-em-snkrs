@@ -2,11 +2,6 @@
 
 <h1>Items</h1>
 
-<%= form_with url: items_path, method: :get, local: true do |f| %>
-  <%= f.text_field :search %>
-  <%= f.submit :search %>
-<% end %>
-
 <table>
   <thead>
     <tr>
@@ -22,9 +17,6 @@
   </thead>
 
   <tbody>
-    <div>
-      <%= link_to image_tag("2020january.jpeg"),"#"%>
-    </div>
 
     <% @items.each do |item| %>
       <tr>
