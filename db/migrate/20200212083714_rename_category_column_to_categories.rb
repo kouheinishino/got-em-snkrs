@@ -1,4 +1,4 @@
-class RenameCategoryColumnToItems < ActiveRecord::Migration[5.2]
+class RenameCategoryColumnToCategories < ActiveRecord::Migration[5.2]
   def change
     rename_column :items, :category, :category_id
   end

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<div class="size_test">
+<%= image_tag("#{@item.image_path}.jpg") %>
+
 <p>
   <strong>Name:</strong>
   <%= @item.name %>
@@ -17,7 +20,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @item.category %>
+  <%= @item.category.name %>
 </p>
 
 <p>
@@ -29,11 +32,6 @@
   <strong>Description:</strong>
   <%= @item.description %>
 </p>
+<div>
 
-<p>
-  <strong>Image path:</strong>
-  <%= @item.image_path %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
