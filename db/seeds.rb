@@ -11,7 +11,8 @@ Item.create!(
     release_date: "2020年1月11日",
     category_id: 1,
     collaboration: "NIKE",
-    description: "Hello!"
+    description: "Hello!",
+    image_path: "/assets/sample1"
 )
 
 Item.create!(
@@ -20,7 +21,8 @@ Item.create!(
     release_date: "2020年3月23日",
     category_id: 3,
     collaboration: "THE NORTH FACE",
-    description: "GoodBye"
+    description: "GoodBye",
+    image_path: "/assets/sample2"
 )
 
 Item.create!(
@@ -29,7 +31,8 @@ Item.create!(
     release_date: "2019年10月30日",
     category_id: 2,
     collaboration: "LOUIS VUITTON",
-    description: "Thankyou"
+    description: "Thankyou",
+    image_path: "/assets/sample3"
 )
 
 [

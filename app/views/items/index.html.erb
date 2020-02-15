@@ -1,40 +1,76 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Items</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Release date</th>
-      <th>Category</th>
-      <th>Collaboration</th>
-      <th>Description</th>
-      <th>Image path</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-
+<body>
+  <div class="frame">
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.price %></td>
-        <td><%= item.release_date %></td>
-        <td><%= item.category.name %></td>
-        <td><%= item.collaboration %></td>
-        <td><%= item.description %></td>
-        <td><%= item.image_path %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="image-group">
+        <td text-align:center;><img width="300px" src="<%=h item.image_path %>"/></td>
+        <p><%= item.name %></p>
+        <p><% item.price %></p>
+        <p><% item.release_date %></p>
+        <p><% item.category.name %></p>
+        <p><% item.collaboration %></p>
+        <p><% item.description %></p>
+        <p><% item.image_path %></p>
+        <div class="link">
+          <td><%= link_to 'Show', item %></td>
+          <td><% link_to 'Edit', edit_item_path(item) %></td>
+          <td><% link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</body>
 
-<br>
 
-<%= link_to 'New Item', new_item_path %>
+
+
+
+
+
+
+
+
+
+
+<% if false %>
+  <p id="notice"><%= notice %></p>
+
+  <h1>Items</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Release date</th>
+        <th>Category</th>
+        <th>Collaboration</th>
+        <th>Description</th>
+        <th>Image path</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% @items.each do |item| %>
+        <tr>
+          <td text-align:center;><img height="300" src="<%=h item.image_path %>"/></td>
+          <td><%= item.name %></td>
+          <td><%= item.price %></td>
+          <td><%= item.release_date %></td>
+          <td><%= item.category.name %></td>
+          <td><%= item.collaboration %></td>
+          <td><%= item.description %></td>
+          <td><%= item.image_path %></td>
+          <td><%= link_to 'Show', item %></td>
+          <td><%= link_to 'Edit', edit_item_path(item) %></td>
+          <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Item', new_item_path %>
+<% end %>

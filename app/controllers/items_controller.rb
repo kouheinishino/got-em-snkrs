@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.search(params[:search])
+    @jackets = Item.where(category_id: 1)
     #@items = Item.all
   end
 
