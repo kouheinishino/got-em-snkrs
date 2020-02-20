@@ -10,14 +10,21 @@
 }
 
 .group {
+  float: left;
   display: inline-block;
+  width: 100%;
+  margin-top:0;
+  margin-right:5%;
+  margin-left:5%;
+  margin-bottom:0;
 }
 
 .group img {
-  height: 300px;
-  width:300px;
+  width: 100%;
+max-width: 100%;
+height: auto;
 }
 
-.twitter-timeline {
-  float: right;
+.group p {
+  font-size: 2rem
 }
