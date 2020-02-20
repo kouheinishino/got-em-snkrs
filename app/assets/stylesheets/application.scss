@@ -7,3 +7,16 @@
 @import "bootstrap";
 @import "top";
 @import "items";
+
+.navbar h1 {
+    display: inline-block;
+    margin: 10px;
+}
+
+.top-right {
+    float: right;
+}
+
+.body-frame {
+    padding: 70px;
+}

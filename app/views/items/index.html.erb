@@ -1,21 +1,23 @@
-<div class="d-flex justify-content-center"><% @items.each do |item| %>
-  <div class="group">
-        <%= link_to item do %>
-        <img src="<%=h item.image_path %>"/>
-        <% end %>
-        <p><%= item.name %></p>
-  </div>
-        <td><%#= item.release_date %></td>
-        <td><%#= item.category.name %></td>
-        <td><%#= item.collaboration %></td>
-        <td><%#= item.description %></td>
-        <td><%#= item.image_path %></td>
-        <td><%#= link_to 'Show', item %></td>
-        <td><%#= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%#= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
+<div class="body-frame">
+      <div class="d-flex justify-content-center"><% @items.each do |item| %>
+      <div class="group">
+            <%= link_to item do %>
+            <img src="<%=h item.image_path %>"/>
+            <% end %>
+            <p><%= item.name %></p>
+      </div>
+            <td><%#= item.release_date %></td>
+            <td><%#= item.category.name %></td>
+            <td><%#= item.collaboration %></td>
+            <td><%#= item.description %></td>
+            <td><%#= item.image_path %></td>
+            <td><%#= link_to 'Show', item %></td>
+            <td><%#= link_to 'Edit', edit_item_path(item) %></td>
+            <td><%#= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+      </div>
+
+      <br>
+
+      <%= link_to 'New Item', new_item_path %>
 </div>
-
-  <br>
-
-  <%= link_to 'New Item', new_item_path %>
