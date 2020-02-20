@@ -1,7 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Items</h1>
-<% @items.each do |item| %>
+<div class="d-flex justify-content-center"><% @items.each do |item| %>
   <div class="group">
         <%= link_to item do %>
         <img src="<%=h item.image_path %>"/>
@@ -16,7 +13,8 @@
         <td><%#= link_to 'Show', item %></td>
         <td><%#= link_to 'Edit', edit_item_path(item) %></td>
         <td><%#= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-<% end %>
+    <% end %>
+</div>
 
   <br>
 

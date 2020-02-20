@@ -2,10 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.body-frame{
-    padding-top: 70px;
-}
-
+@media (min-width:992px){
 .top-right {
     float: right;
 }
@@ -29,7 +26,11 @@
 }
 
 .image-group-frame {
+    display:flex;
+    flex-wrap:wrap;
     width: 100%;
+    height:auto;
+    padding:10px;
 }
 
 .image-group1-if {
@@ -49,4 +50,44 @@
 .image :hover {
     opacity: 0.6;
     transition: all 1s;
+}
+}
+
+@media (max-width:767px){
+  .image-group-frame {
+      display:flex;
+      flex-direction:column;
+      width: 100%;
+      height:auto;
+      padding:10px;
+  }
+
+  .image-group1-if {
+      width: 30%;
+      margin: 15px 0px 15px 0px;
+  }
+
+  .image-group1-icon img {
+      width: 250px;
+  }
+}
+
+@media (min-width:768px) and (max-width:991px){
+  .image-group-frame {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      width: 100%;
+      height:auto;
+      padding:50px;
+  }
+
+  .image-group1-if {
+      width: 50%;
+      margin: 15px 15px 15px 15px;
+  }
+
+  .image-group1-icon img {
+      width: 250px;
+  }
 }
