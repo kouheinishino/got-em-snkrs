@@ -7,9 +7,10 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.search(params[:search])
-    @jackets = Item.where(category_id: 1)
-    #@items = Item.all
+    @items = Item.all
+    @items = @items.where!(["name LIKE ?", "%#{params[:name]}%"]) if params[:name]
+    @items = @items.where!(category_id: params[:category_id]) if params[:category_id]
+    @items = @items.where!(collaboration: params[:collaboration]) if params[:collaboration]
   end
 
   # GET /items/1
