@@ -1,30 +1,130 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.size_test img {
-    width: 600px;  /* 横幅を200pxに */
-    float:left;
+
+//PC用
+@media (min-width:1185px){
+
+//show
+.item_flex{
+  display:flex;
 }
-.size_test p {
-    font-size:  40px;    /* 文字サイズ指定 */
+
+.item_frame img {
+    width: 40%;  /* 横幅を200pxに */
+}
+.item_frame p {
+    font-size:  30px;    /* 文字サイズ指定 */
+}
+
+.item_details{
+    width: 30%;
+    margin: 0px 5% 0px 5%;
+}
+//index
+.body-frame {
+  display:flex;
+  flex-wrap:wrap;
+  //justify-content:center;
+  width: 100%;
+  height:auto;
 }
 
 .group {
-  float: left;
-  display: inline-block;
-  width: 100%;
-  margin-top:0;
-  margin-right:5%;
-  margin-left:5%;
-  margin-bottom:0;
+  width: 30%;
+  margin: 0px 1.5% 0px 1.5%;
 }
 
 .group img {
   width: 100%;
-max-width: 100%;
-height: auto;
 }
 
 .group p {
   font-size: 2rem
+}
+}
+
+//タブレット用
+@media (min-width:768px) and (max-width:1185px){
+  //show
+  .item_flex{
+    display:flex;
+  }
+
+  .item_frame img {
+      width: 45%;  /* 横幅を200pxに */
+      //height: 45%;
+  }
+  .item_frame p {
+      font-size:  20px;    /* 文字サイズ指定 */
+  }
+
+  .item_details{
+      width: 30%;
+      margin: 0px 5% 0px 5%;
+  }
+  //index
+  .body-frame p{
+    display:flex;
+    flex-wrap:wrap;
+    //justify-content:center;
+    width: 100%;
+    height:auto;
+  }
+
+  .group {
+    width: 30%;
+    margin: 0px 1.5% 0px 1.5%;
+  }
+
+  .group img {
+    width: 100%;
+  }
+
+  .group p {
+    font-size: 2rem
+  }
+}
+
+//スマホ用
+@media (max-width:767px){
+  //show
+  .item_flex{
+    display:flex;
+    flex-wrap:wrap;
+  }
+
+  .item_frame img {
+      width: 70%;  /* 横幅を200pxに */
+  }
+  .item_frame p {
+      font-size:  10px;    /* 文字サイズ指定 */
+  }
+
+  .item_details{
+      width: 30%;
+      margin: 0px 5% 0px 5%;
+  }
+
+  //index
+  .body-frame {
+    display:flex;
+    flex-wrap:wrap;
+    //justify-content:center;
+    width: 100%;
+    height:auto;
+  }
+
+  .group {
+    width: 40%;
+    margin: 0px 5% 0px 5%;
+  }
+
+  .group img {
+    width: 100%;
+  }
+
+  .group p {
+    font-size: 2rem
+  }
 }
