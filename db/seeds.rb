@@ -8,7 +8,7 @@
 Item.create!(
     name: "sample1",
     price: "2000円",
-    release_date: "2020年1月11日",
+    release_date: "2020-01-11",
     category_id: 1,
     collaboration: "NIKE",
     description: "Hello!",
@@ -18,7 +18,7 @@ Item.create!(
 Item.create!(
     name: "sample2",
     price: "16000円",
-    release_date: "2020年3月23日",
+    release_date: "2020-03-23",
     category_id: 3,
     collaboration: "THE NORTH FACE",
     description: "GoodBye",
@@ -28,7 +28,7 @@ Item.create!(
 Item.create!(
     name: "sample3",
     price: "150000円",
-    release_date: "2019年10月30日",
+    release_date: "2019-10-30",
     category_id: 2,
     collaboration: "LOUIS VUITTON",
     description: "Thankyou",

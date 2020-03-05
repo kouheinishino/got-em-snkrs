@@ -4,21 +4,22 @@
 
 @media (min-width:992px){
 
-.top-frame h1 {
-    text-align: center;
-    padding-bottom: 20px;
-    margin: 0px 0px 20px 0px;
-    border-bottom: solid 3px #000000;
-}
-
 .body-frame {
     width: 90%;
     margin: 0px auto;
 }
 
+.top-frame h1 {
+    // text-align: center;
+    padding-bottom: 20px;
+    margin: 0px 0px 20px 0px;
+    border-bottom: solid 3px #000000;
+}
+
 .image-group-frame {
     display:flex;
     flex-wrap:wrap;
+    // justify-content: space-between;
     width: 100%;
     height:auto;
     padding:10px;
@@ -26,12 +27,11 @@
 
 .image-group1-if {
     width: 30%;
-    float: left;
-    margin: 15px 0px 15px 40px;
+    margin: 15px 1.5% 15px 1.5%;
 }
 
 .image-group1-icon img {
-    width: 350px;
+    width: 100%;
 }
 
 .image-group-text {
