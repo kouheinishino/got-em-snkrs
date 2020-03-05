@@ -4,13 +4,16 @@ class ItemsController < ApplicationController
   # Basic認証フィルタを対象アクションに指定
   http_basic_authenticate_with :name => 'a', :password => 'a', :only => :new
 
+  require 'pp'
+
   # GET /items
   # GET /items.json
   def index
     @items = Item.all
-    @items = @items.where!(["name LIKE ?", "%#{params[:name]}%"]) if params[:name]
+    @items = @items.where!("name LIKE ?", "%#{params[:name]}%") if params[:name]
     @items = @items.where!(category_id: params[:category_id]) if params[:category_id]
     @items = @items.where!(collaboration: params[:collaboration]) if params[:collaboration]
+    @items = @items.where!(release_date: params[:start_date]..params[:end_date]) if params[:start_date]..params[:end_date]
   end
 
   # GET /items/1
