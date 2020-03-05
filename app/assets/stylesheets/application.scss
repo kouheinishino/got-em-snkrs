@@ -8,13 +8,28 @@
 @import "top";
 @import "items";
 
+.fixed-top h1 {
+  font-size: 1.5rem;
+}
+
 .navbar h1 {
     display: inline-block;
     margin: 10px;
 }
 
 .top-right {
-    float: right;
+    //float: right;
+}
+
+.body-frame{
+    padding-top: 130px
+}
+
+#sidebar {
+  width: 180px;
+  float: right;
+  margin: 0;
+  padding: 0;
 }
 <<<<<<< HEAD
 

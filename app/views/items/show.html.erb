@@ -1,37 +1,40 @@
+<div class="body-frame">
 <p id="notice"><%= notice %></p>
 
-<div class="size_test">
+<div class="item_frame">
+
+      <p>
+        <%= @item.name %>
+      </p>
+<div class="item_flex">
 <%= image_tag("#{@item.image_path}.jpg") %>
+ <div class="item_details">
+      <p>
+        <strong>Price:</strong>
+        <%= @item.price %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+      <p>
+        <strong>Release date:</strong>
+        <%= @item.release_date %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
+      <p>
+        <strong>Category:</strong>
+        <%= @item.category.name %>
+      </p>
 
-<p>
-  <strong>Release date:</strong>
-  <%= @item.release_date %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @item.category.name %>
-</p>
-
-<p>
-  <strong>Collaboration:</strong>
-  <%= @item.collaboration %>
-</p>
+      <p>
+        <strong>Collaboration:</strong>
+        <%= @item.collaboration %>
+      </p>
 
 <p>
   <strong>Description:</strong>
   <%= @item.description %>
 </p>
-<div>
+</div>
+</div>
+</div>
 
-<%= link_to 'Back', items_path %>
+</div>
