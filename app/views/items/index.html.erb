@@ -3,7 +3,7 @@
       <div class="d-flex justify-content-center"><% @items.each do |item| %>
       <div class="group">
             <%= link_to item do %>
-            <img src="<%=h item.image_path %>"/>
+            <%= image_tag("#{item.image_path}") %>
             <% end %>
             <p><%= item.name %></p>
       </div>
