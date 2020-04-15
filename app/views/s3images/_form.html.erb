@@ -1,0 +1,32 @@
+<%= form_with(model: s3image, local: true) do |form| %>
+  <% if s3image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(s3image.errors.count, "error") %> prohibited this s3image from being saved:</h2>
+
+      <ul>
+      <% s3image.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :file_name %>
+    <%= form.file_field :file_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
